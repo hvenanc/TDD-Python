@@ -5,6 +5,8 @@ Aplicando testes automatizados utilizando a biblioteca Pytest.
 
 Crie um ambiente virtual (venv)
 
+```` git clone https://github.com/hvenanc/TDD-Python.git````
+
 ```pip install -r requirements.txt```
 
 Biblliotecas utilizadas:

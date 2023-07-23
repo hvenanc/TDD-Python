@@ -1,5 +1,6 @@
 from Service.service import Service
 from Entities.coletor import Coletor
+from Entities.fornecedor import Fornecedor
 from Repository.repository import Repositorio
 
 
@@ -11,5 +12,15 @@ class TestClass:
 
         esperado = "Usuário Coletor Cadastrado com Sucesso!"
         resultado = cadastro.cadastrar_usuario_coletor(user)
+
+        assert esperado == resultado
+
+    def test_cadastro_usuario_forncedor_com_dados_validos(self):
+        dados = Repositorio()
+        user = Fornecedor("Henrique", "hvs", "hvs@gmail.com", "Inva94005", "71724311034", "24/03/1985")
+        cadastro = Service(dados)
+
+        esperado = "Usuário Coletor Fornecedor com Sucesso!"
+        resultado = cadastro.cadastrar_usuario_fornecedor(user)
 
         assert esperado == resultado

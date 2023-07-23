@@ -1,4 +1,4 @@
-from usuario import Usuario
+from Entities.usuario import Usuario
 
 
 class Fornecedor(Usuario):
