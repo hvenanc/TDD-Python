@@ -12,8 +12,9 @@ class Service:
 
     @staticmethod
     def valida_cep(cep):
-        if len(cep) != 8:
-            return False
+        if len(cep) == 8:
+            return True
+        return False
 
     @staticmethod
     def validar_cnpj(cnpj):
@@ -49,7 +50,7 @@ class Service:
     def cadastrar_usuario_coletor(self, usuario: Coletor):
         if not self.validar_cnpj(usuario.cnpj):
             raise Exception("CNPJ Inválido")
-        elif self.valida_cep(usuario.cep):
+        elif not self.valida_cep(usuario.cep):
             raise Exception("Cep Inválido")
         elif not self.validar_nome(usuario.nome):
             raise Exception("Nome Inválido")

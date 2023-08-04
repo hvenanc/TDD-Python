@@ -46,3 +46,13 @@ class TestClass:
             resultado = cadastro.cadastrar_usuario_coletor(user)
 
             assert resultado
+
+    def test_cadastro_usuario_coletor_com_cep_invalido(self):
+        with pytest.raises(Exception):
+            dados = Repositorio()
+            user = Coletor("Henrique Venâncio", "hvs", "hvs@poli.br", "Invalida@77", "513530", "34999724000102")
+            cadastro = Service(dados)
+
+            resultado = cadastro.cadastrar_usuario_coletor(user)
+
+            assert resultado
